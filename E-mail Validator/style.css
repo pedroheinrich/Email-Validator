@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    }
+
+    :root {
+        --bg-color: #201b2c;
+        --second-bg-color: #323946;
+        --text-color: #fff;
+        --main-color: #00ff88;
+    }
+
+    /*
+    sombra:
+box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);//
+box-shadow: 0px 3px 10px var(--main-color);
+*/
+
+
+body{
+
+    background: var(--bg-color);
+
+}
+
+
+
+section { 
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    
+}
+
+
+.left {
+    display: flex;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:30px;
+    padding: 0;
+    position: relative;
+
+        
+}
+
+.left h1 {
+    margin: 0;
+    padding: 15px;
+    gap: 0;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-shadow: 4px 3px 2px rgba(0, 0, 0, .2);
+}
+
+.left p {
+    
+    font-size: 15px;
+    font-weight: 100;
+    color: var(--main-color);
+}
+.right{
+    width: 70%;
+    display: flex;
+    width: 100vh;
+    align-items: center;
+    justify-content: left;
+    margin: auto;
+    padding: 30px;
+}
+
+.hero {
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 10px;
+}
+.input-group{
+    width: 130%;
+    max-width: 700px;
+    position: relative;
+}
+
+#email-fied {
+    display: block;
+    width: 80%;
+    background: transparent;
+    color: var(--main-color);
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px var(--main-color);
+    padding: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    padding-top: 9px;
+    border: none;
+    position: relative;
+    z-index: 10;
+}
+
+#email-label{
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 2px;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px;
+    transition: bottom 0.5s;
+}
+
+#email-error {
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    font-size: 16px;
+    color: rgb(255, 76, 76);
+    transition: top 0.5s;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mail Validation</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+    
+</head>
+<body>
+
+<section >
+    <div class="left">
+       
+            <h1>E-mail Validation</h1>
+            <p>by Pedro Heinrich</p>
+        
+    </div>
+
+    <div class="right" >
+        
+        <div class="hero">
+            <div class="input-group">
+                <label id="email-label">E-mail</label>
+                <input type="email" spellcheck="fasle" id="email-fied" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    <script>
+        let emailField = document.querySelector('input');
+        let emailLabel = document.querySelector('label')
+        let emailError = document.querySelector('span');
+
+        function validateEmail(){
+            emailLabel.style.bottom = "50px";
+
+            if(!emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+                emailError.innerHTML = "Please enter a valid e-mail!";
+                emailField.style.color = "rgb(255, 80, 80)";
+                emailField.style.boxShadow = "0px 3px 10px rgb(255, 80, 80)";
+                emailLabel.style.color = "rgb(255, 80, 80)";
+                emailError.style.top = "120%";
+                return false;
+                
+            }
+
+            emailError.innerHTML = "Valid e-mail!";
+            emailField.style.color = "#00ff88";
+            emailField.style.boxShadow = "0px 3px 10px var(--main-color)";
+            emailLabel.style.color = "#00ff88";
+            emailError.style.color = "#00ff88";
+            emailError.style.top = "120%";
+            return true;
+
+        }
+    
+
+
+
+    </script>
+</body>
+</html>
